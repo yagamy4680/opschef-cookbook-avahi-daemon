@@ -20,3 +20,11 @@ service "avahi-daemon" do
   service_name node['avahi-daemon']['service']['name']
   action [ :start, :enable ]
 end
+
+template 'avahi-daemon.conf' do
+  path   "/etc/avahi/avahi-daemon.conf"
+  source 'avahi-daemon.conf.erb'
+  owner  'root'
+  group  'root'
+  mode   '0644'
+end
