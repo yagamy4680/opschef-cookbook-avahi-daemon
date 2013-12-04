@@ -1,5 +1,4 @@
 
-
 Travis-ci status: [![Build Status](https://secure.travis-ci.org/jackl0phty/opschef-cookbook-avahi-daemon.png?branch=master)](http://travis-ci.org/jackl0phty/opschef-cookbook-avahi-daemon) 
 
 Description
@@ -16,6 +15,11 @@ Debian, Ubuntu
 
 Attributes
 ==========
+
+### default
+Generally used attributes. "The Config" refers to "avahi-daemon.conf" the main config file.
+- `node['avahi']['allow_interfaces']` - Allowed network interfaces for avahi-daemon
+- `node['avahi']['deny_interfaces']` - Denied network interfaces for avahi-daemon
 
 Set the avahi-daemon service name.
 <pre><code>
