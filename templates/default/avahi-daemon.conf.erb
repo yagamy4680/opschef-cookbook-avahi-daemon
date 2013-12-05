@@ -25,12 +25,12 @@
 use-ipv4=yes
 use-ipv6=yes
 <% if node['avahi']['allow_interfaces'] -%>
-allow-interfaces=<% node['avahi-daemon']['allow_interfaces'] %>
+allow-interfaces=<% node['avahi']['allow_interfaces'] %>
 <% else -%>
 #allow-interfaces=eth0
 <% end %>
 <% if node['avahi']['deny_interfaces'] -%>
-deny-interfaces=<% node['avahi-daemon']['deny_interfaces'] %>
+deny-interfaces=<% node['avahi']['deny_interfaces'] %>
 <% else -%>
 #deny-interfaces=eth0
 <% end %>
